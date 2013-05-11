@@ -1,10 +1,19 @@
-*.mode1v3
+*.depend
+*.layout
+*.mode*v3
 *.pbxuser
-build/
-obj/
-*.o
-*.app/
-*.DS_Store
-/Dev
+*.app*
+*.DS_*
+*.xcworkspacedata
+xcuserdata/
 
-.svn
+*.opensdf
+*.sdf
+*.suo
+*.ipch
+
+.svn/
+obj/
+
+build/
+!data/
