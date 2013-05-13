@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.depend
 *.layout
 *.mode*v3
@@ -17,3 +18,22 @@ obj/
 
 build/
 !data/
+=======
+*.mode1v3
+*.pbxuser
+build/
+obj/
+*.o
+*.app/
+*.DS_Store
+/Dev
+
+*.svn
+
+*.xcscheme
+*.xcsettings
+*.xcworkspacedata
+*.xcworkspace
+*.xcuserdatad
+	
+>>>>>>> upstream/master

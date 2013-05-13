@@ -27,8 +27,10 @@ public:
 	bool isBody();
 	
 	//----------------------------------------
+    static bool shouldRemove(ofxBox2dBaseShape &b);
 	bool isFixed();
-	
+	bool isSleeping();
+    
 	//----------------------------------------
 	b2World* getWorld();
 	

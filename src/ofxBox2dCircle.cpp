@@ -42,6 +42,9 @@ void ofxBox2dCircle::setup(b2World * b2dworld, float x, float y, float radius) {
 	body  = b2dworld->CreateBody(&bodyDef);
 	body->CreateFixture(&fixture);
 }
+void ofxBox2dCircle::setup(b2World * b2dworld, ofVec2f &pts, float radius) {
+    setup(b2dworld, pts.x, pts.y, radius);
+}
 
 //------------------------------------------------
 void ofxBox2dCircle::addRepulsionForce(float x, float y, float amt) {
@@ -137,8 +140,17 @@ void ofxBox2dCircle::draw() {
 	ofTranslate(getPosition().x, getPosition().y, 0);
 	ofRotate(getRotation(), 0, 0, 1);
 	ofCircle(0, 0, radius);
-	ofSetColor(0);
+	
+    ofPushStyle();
+    ofEnableAlphaBlending();
+    ofSetColor(0);
 	ofLine(0, 0, radius, 0);
+    if(isSleeping()) {
+        ofSetColor(255, 100);
+        ofCircle(0, 0, radius);
+    }
+    ofPopStyle();
+    
 	ofPopMatrix();
 	
 }
